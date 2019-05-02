@@ -30,7 +30,8 @@ public class PaymentPageTest {
 		
 			//System.setProperty("webdriver.chrome.driver", "E:\\java\\chromedriver.exe");
 		//vE:/java/chromedriver_2.35/chromedriver.exe
-		System.setProperty("webdriver.chrome.driver", "E:\\java\\chromedriver_2.35\\chromedriver.exe");
+	//	System.setProperty("webdriver.chrome.driver", "E:\\java\\chromedriver_2.35\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "D:\\chromedriver.exe");
 		driver =new ChromeDriver();
 			driver.get("https://demo.midtrans.com/");
 			driver.manage().window().maximize();
@@ -48,6 +49,7 @@ public class PaymentPageTest {
 		
 		Assert.assertTrue(obj.clickOnContinue());
 		Assert.assertTrue(obj.clickOnCreditCard());
+		Assert.assertTrue(obj.sendDataToCardNumber());
 		
 	}
 	

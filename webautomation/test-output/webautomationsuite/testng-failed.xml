@@ -6,7 +6,8 @@
     <classes>
       <class name="ApplicationPagesTestCases.PaymentPageTest">
         <methods>
-          <include name="clickOnBuyButton"/>
+          <include name="validateSuccessfulpayment"/>
+          <include name="selectBrowser"/>
         </methods>
       </class> <!-- ApplicationPagesTestCases.PaymentPageTest -->
     </classes>

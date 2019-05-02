@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
 </tr><tr>
-<td>Started on:</td><td>Thu May 02 01:48:20 IST 2019</td>
+<td>Started on:</td><td>Thu May 02 13:13:58 IST 2019</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (39 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (91 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,19 +76,41 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='ApplicationPagesTestCases.PaymentPageTest.selectBrowser()'><b>selectBrowser</b><br>Test class: ApplicationPagesTestCases.PaymentPageTest</td>
-<td><div><pre>org.testng.TestNGException: 
-Method selectBrowser requires 1 parameters but 0 were supplied in the @Configuration annotation.
-... Removed 20 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace632414455", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace632414455'><pre>org.testng.TestNGException: 
-Method selectBrowser requires 1 parameters but 0 were supplied in the @Configuration annotation.
-	at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:191)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:127)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:376)
-	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:84)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:197)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
-	at org.testng.TestRunner.beforeRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:616)
+<td><div><pre>java.lang.IllegalStateException: The driver executable does not exist: E:\java\chromedriver_2.35\chromedriver.exe
+	at com.google.common.base.Preconditions.checkState(Preconditions.java:197)
+	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:121)
+	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:116)
+	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
+	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:296)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:116)
+	at ApplicationPagesTestCases.PaymentPageTest.selectBrowser(PaymentPageTest.java:34)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace327177752", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace327177752'><pre>java.lang.IllegalStateException: The driver executable does not exist: E:\java\chromedriver_2.35\chromedriver.exe
+	at com.google.common.base.Preconditions.checkState(Preconditions.java:197)
+	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:121)
+	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:116)
+	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
+	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:296)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:116)
+	at ApplicationPagesTestCases.PaymentPageTest.selectBrowser(PaymentPageTest.java:34)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:510)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:211)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:585)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
 	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
 	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
@@ -98,12 +120,25 @@ Method selectBrowser requires 1 parameters but 0 were supplied in the @Configura
 	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
 	at org.testng.TestNG.run(TestNG.java:1048)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:112)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:205)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
 </pre></div></td>
 <td>0</td>
-<td>null</td></tr>
+<td>ApplicationPagesTestCases.PaymentPageTest@3b6eb2ec</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='ApplicationPagesTestCases.PaymentPageTest.quit()'><b>quit</b><br>Test class: ApplicationPagesTestCases.PaymentPageTest</td>
+<td></td>
+<td>0</td>
+<td>ApplicationPagesTestCases.PaymentPageTest@3b6eb2ec</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
@@ -113,10 +148,10 @@ Method selectBrowser requires 1 parameters but 0 were supplied in the @Configura
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='ApplicationPagesTestCases.PaymentPageTest.clickOnBuyButton()'><b>clickOnBuyButton</b><br>Test class: ApplicationPagesTestCases.PaymentPageTest</td>
+<td title='ApplicationPagesTestCases.PaymentPageTest.validateSuccessfulpayment()'><b>validateSuccessfulpayment</b><br>Test class: ApplicationPagesTestCases.PaymentPageTest</td>
 <td></td>
 <td>0</td>
-<td>ApplicationPagesTestCases.PaymentPageTest@31407cec</td></tr>
+<td>ApplicationPagesTestCases.PaymentPageTest@3b6eb2ec</td></tr>
 </table><p>
 </body>
 </html>
