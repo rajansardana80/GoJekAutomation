@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [webautomationsuite]">
+  <parameter name="browser" value="chrome"/>
+  <test name="PaymentGatewayTest(failed)">
+    <classes>
+      <class name="ApplicationPagesTestCases.PaymentPageTest">
+        <methods>
+          <include name="clickOnBuyButton"/>
+        </methods>
+      </class> <!-- ApplicationPagesTestCases.PaymentPageTest -->
+    </classes>
+  </test> <!-- PaymentGatewayTest(failed) -->
+</suite> <!-- Failed suite [webautomationsuite] -->
