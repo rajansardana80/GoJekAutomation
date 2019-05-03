@@ -27,7 +27,7 @@ public class PaymentPageTest {
 	
 	public void selectBrowser()
 	{
-		
+		System.out.println("Rajan Sardana");
 			//System.setProperty("webdriver.chrome.driver", "E:\\java\\chromedriver.exe");
 		//vE:/java/chromedriver_2.35/chromedriver.exe
 	//	System.setProperty("webdriver.chrome.driver", "E:\\java\\chromedriver_2.35\\chromedriver.exe");
