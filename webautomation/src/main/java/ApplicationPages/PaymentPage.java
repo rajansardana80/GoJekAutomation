@@ -8,13 +8,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
-public class PaymentPage {
+import Utility.CommonUtility;
+
+public class PaymentPage extends CommonUtility{
 	
 	 WebDriver driver;
 	
 	
-	@FindBy(xpath="//a[@class='btn buy']")
-	private WebElement BuyButton;
+	String BuyButton="//a[@class='btn buy']";
+	//private WebElement BuyButton;
 	
 	@FindBy(xpath="//div[@class='cart-action']/child::div[1]")
 	private WebElement Checkout;
@@ -56,18 +58,22 @@ public class PaymentPage {
 	
 	public boolean clickOnBuyButton()
 	{
-		BuyButton.click();
-		return true;
+		CommonUtility.explicitWait(BuyButton,driver);
+		CommonUtility.click(BuyButton);
+		return clickresult; 
+	
 	}
 	
 	public boolean clickOnCheckout()
 	{
-		Checkout.click();
+		/*Checkout.click();
 	//	return true;
-		/*driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		Actions actions = new Actions(driver);
-		actions.moveToElement(Checkout).click().perform();*/
-		return true;
+		actions.moveToElement(Checkout).click().perform();
+		return true;*/
+		CommonUtility.click(Checkout);
+		return clickresult; 
 	}
 	
 	public boolean clickOnContinue()
@@ -82,43 +88,40 @@ public class PaymentPage {
 		//System.out.println(result);
 		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		//WebElement element = driver.findElement(By("element_path"));
-		Actions actions = new Actions(driver);
-		actions.moveToElement(Continue).click().perform();
+		/*Actions actions = new Actions(driver);
+		actions.moveToElement(Continue).click().perform();*/
 		
 		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		//driver.switchTo().fra
 	//	driver.switchTo().defaultContent();
 	//	Continue.click();
-		return true;
+		CommonUtility.clickByAction(Continue);
+		return clickByActionresult;
 	}
 
 	
 	public boolean clickOnCreditCard()
 	{
-		Actions actions = new Actions(driver);
-		actions.moveToElement(CreditCard).click().perform();
-		return true;
+		CommonUtility.clickByAction(CreditCard);
+		return clickByActionresult;
 	}
 	
-	public boolean sendDataToCardNumber(String cardNumber)
+	public boolean sendDataToCardNumber(String datacardNumber)
 	{
-		Actions actions = new Actions(driver);
-		actions.moveToElement(CardNumber).sendKeys(cardNumber).perform();
-		return true;
+		CommonUtility.sendByAction(CardNumber, datacardNumber);
+		return sendByActionresult;
 	}
 	
-	public boolean sendDataToExpiryDate(String expiryDate)
+	public boolean sendDataToExpiryDate(String dataexpiryDate)
 	{
-		Actions actions = new Actions(driver);
-		actions.moveToElement(ExpiryDate).sendKeys(expiryDate).perform();
-		return true;
+		CommonUtility.sendByAction(ExpiryDate, dataexpiryDate);
+		return sendByActionresult;
 	}
 	
-	public boolean sendDataToCvv(String cvv)
+	public boolean sendDataToCvv(String datacvv)
 	{
-		Actions actions = new Actions(driver);
-		actions.moveToElement(Cvv).sendKeys(cvv).perform();
-		return true;
+		CommonUtility.sendByAction(Cvv, datacvv);
+		return sendByActionresult;
 	}
 	
 	
@@ -134,14 +137,14 @@ public class PaymentPage {
 		//System.out.println(result);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		//WebElement element = driver.findElement(By("element_path"));
-		Actions actions = new Actions(driver);
-		actions.moveToElement(PayNow).click().perform();
+		CommonUtility.clickByAction(PayNow);
+		return clickByActionresult;
 		
 		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		//driver.switchTo().fra
 		
 	//	Continue.click();
-		return true;
+		//return true;
 	}
 
 	
