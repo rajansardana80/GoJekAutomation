@@ -5,9 +5,9 @@
     <classes>
       <class name="ApplicationPagesTestCases.PaymentPageTest">
         <methods>
-          <include name="validateSuccessfulpayment"/>
           <include name="selectBrowser"/>
           <include name="quit"/>
+          <include name="validateSuccessfulpayment"/>
         </methods>
       </class> <!-- ApplicationPagesTestCases.PaymentPageTest -->
     </classes>

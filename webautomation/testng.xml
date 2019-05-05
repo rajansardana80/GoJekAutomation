@@ -3,7 +3,10 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name = "webautomationsuite">
 
-<parameter name ="browser" value="chrome"/>
+<!--  <parameter name ="browser" value="chrome"/>-->
+ <listeners>
+<listener class-name="TestListener.AutomationListener"></listener>
+</listeners> 
 <test name = "PaymentGatewayTest" >
 
 <classes>
