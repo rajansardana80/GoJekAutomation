@@ -15,8 +15,8 @@ public class PaymentPage extends CommonUtility{
 	 WebDriver driver;
 	
 	
-	String BuyButton="//a[@class='btn buy']";
-	//private WebElement BuyButton;
+	 @FindBy(xpath="//a[@class='btn buy']")
+	private WebElement BuyButton;
 	
 	@FindBy(xpath="//div[@class='cart-action']/child::div[1]")
 	private WebElement Checkout;
@@ -58,7 +58,7 @@ public class PaymentPage extends CommonUtility{
 	
 	public boolean clickOnBuyButton()
 	{
-		CommonUtility.explicitWait(BuyButton,driver);
+		//CommonUtility.explicitWait(BuyButton,driver);
 		CommonUtility.click(BuyButton);
 		return clickresult; 
 	
@@ -108,20 +108,23 @@ public class PaymentPage extends CommonUtility{
 	
 	public boolean sendDataToCardNumber(String datacardNumber)
 	{
-		CommonUtility.sendByAction(CardNumber, datacardNumber);
-		return sendByActionresult;
+		CommonUtility.sendByKeys(CardNumber, datacardNumber);
+	
+		return sendByKeysresult;
 	}
 	
 	public boolean sendDataToExpiryDate(String dataexpiryDate)
 	{
-		CommonUtility.sendByAction(ExpiryDate, dataexpiryDate);
-		return sendByActionresult;
+		CommonUtility.sendByKeys(ExpiryDate, dataexpiryDate);
+	
+		return sendByKeysresult;
 	}
 	
 	public boolean sendDataToCvv(String datacvv)
 	{
-		CommonUtility.sendByAction(Cvv, datacvv);
-		return sendByActionresult;
+		CommonUtility.sendByKeys(Cvv, datacvv);
+	
+		return sendByKeysresult;
 	}
 	
 	
