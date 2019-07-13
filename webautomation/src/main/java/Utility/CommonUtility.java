@@ -24,6 +24,7 @@ public class CommonUtility extends TestBase{
 		clickresult=true;
 	
 		// just a comment for demo
+		//demo
 	}
 //	public static void explicitWait(WebElement ele,WebDriver driver)
 //	{
