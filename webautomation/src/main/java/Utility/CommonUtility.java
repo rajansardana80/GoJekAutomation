@@ -23,7 +23,7 @@ public class CommonUtility extends TestBase{
 		ele.click();
 		clickresult=true;
 	
-		
+		// just a comment for demo
 	}
 //	public static void explicitWait(WebElement ele,WebDriver driver)
 //	{
